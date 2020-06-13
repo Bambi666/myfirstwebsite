@@ -1,0 +1,55 @@
+.breadcrumbs {
+
+
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background: $color-color;
+    box-shadow: 0 10px 10px rgba($color: #000000, $alpha: .8);
+
+
+    .container {
+        text-align: center;
+
+        h4 {
+            color: $secondary-color;
+            display: block;
+            margin-bottom: 40px;
+        }
+
+        .links {
+            display: block;
+
+            li {
+                display: inline-block;
+                // margin: 0 0 0 20px;
+
+                &:after {
+                    content: "/";
+                    display: inline-block;
+                    margin: 0 20px;
+                    color: $primary-color;
+                    font-weight: 500;
+
+
+                }
+
+                &:last-child {
+                    &::after {
+
+                        display: none;
+                    }
+                }
+
+                a {
+                    color: $secondary-color;
+                    font-weight: 500;
+
+                    &:hover {
+                        color: $primary-hover;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}

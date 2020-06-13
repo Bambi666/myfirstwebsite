@@ -1,0 +1,50 @@
+.partners {
+    background: $light-bg;
+    color: $primary-color;
+
+    .container {
+        text-align: center;
+
+        .text {
+            padding: 100px 0;
+
+            h3 {
+                font-size: 30px;
+            }
+
+            p {
+                font-size: 20px;
+                font-weight: 300;
+            }
+
+        }
+
+        .logos {
+            display: flex;
+            align-content: space-around;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+
+
+            .part {
+                width: 25%;
+                padding: 20px;
+                margin-bottom: 70px;
+
+                img {
+
+                    max-width: 100%;
+                }
+
+                @media (max-width: 751px) {
+                    width: calc(100% /3);
+                }
+
+                @media (max-width: 481px) {
+                    width: 50%;
+                }
+            }
+        }
+    }
+}

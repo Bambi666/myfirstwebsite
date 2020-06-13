@@ -1,0 +1,154 @@
+.top {
+    position: relative;
+    background: url('../images/864-1920x1080.jpg');
+    background-position: center, center;
+    padding: 100px 0;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: $dark-overlay;
+    }
+
+    .container {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        align-content: space-around;
+        align-items: center;
+        color: $secondary-color;
+        padding: 0;
+
+        @media (max-width: 750px) {
+            flex-direction: column;
+        }
+
+
+        .left {
+            width: 50%;
+            font-size: 20px;
+            padding: 0 20px 0 20px;
+
+            @media (max-width: 750px) {
+                width: 100%;
+                text-align: center;
+            }
+
+            h2 {
+                margin: 0 0 50px 0;
+            }
+
+            a {
+                color: $secondary-color;
+                text-decoration: underline;
+            }
+
+
+        }
+
+        .right {
+            width: 50%;
+            padding: 0 20px 0 20px;
+
+            @media (max-width: 750px) {
+                width: 100%;
+                text-align: center;
+            }
+
+            h4 {
+                margin-bottom: 30px;
+            }
+
+            a {
+                display: block;
+                color: $secondary-color;
+                margin-bottom: 10px;
+
+                &:hover {
+                    color: $color-color;
+                    text-decoration: underline;
+                }
+
+            }
+
+            .row {
+                display: flex;
+                align-content: space-around;
+
+                @media (max-width: 450px) {
+                    flex-direction: column;
+                }
+
+                .col {
+                    width: 50%;
+                    margin-bottom: 40px;
+
+                    @media (max-width: 450px) {
+                        width: 100%;
+                    }
+                }
+            }
+
+
+            .social {
+                display: block;
+                // width: 100%;
+
+                li {
+                    display: inline-block;
+
+                    a {
+                        display: inline-block;
+                    }
+
+                    &:after {
+                        content: "/";
+                        display: inline-block;
+                        color: $color-color;
+                    }
+
+                    &:last-child {
+                        &::after {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+}
+
+.bottom {
+    background: $light-bg;
+
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        img {
+            width: 80px;
+            margin: 30px 0;
+            opacity: 0.2;
+        }
+
+        a {
+            display: inline-block;
+            color: $color-color;
+            transition: 0.4s all;
+
+            &:hover {
+                color: $primary-hover;
+            }
+        }
+    }
+}

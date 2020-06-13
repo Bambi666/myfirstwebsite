@@ -1,0 +1,169 @@
+.contact {
+    background: $light-bg;
+    color: $primary-color;
+    padding: 75px 0;
+
+
+    h3 {
+        text-align: center;
+        margin: 0 0 20px 0;
+
+    }
+
+    .contact-description {
+        width: 75%;
+        margin: 0 auto 40px auto;
+        text-align: center;
+    }
+
+    form {
+        width: 60%;
+        margin: 0 auto;
+
+        .row {
+            margin: 0 0 30px 0;
+
+            label {
+                display: block;
+                margin: 0 0 4px 0;
+                font-weight: 300;
+            }
+
+            input[type="text"],
+            input[type="password"],
+            input[type="email"],
+            textarea,
+            select {
+                border: none;
+                border-bottom: 2px solid $primary-color;
+                padding: 10px 0;
+                width: 100%;
+                background: none;
+                outline: none;
+            }
+
+            textarea {
+                resize: vertical;
+                min-height: 150px;
+
+            }
+
+            .checkbox {
+
+                input {
+                    display: none;
+
+                    &:checked {
+                        &+label {
+                            span {
+                                background-position: bottom center;
+                            }
+                        }
+                    }
+                }
+
+                label {
+                    display: flex;
+                    align-items: flex-start;
+                    padding: 8px 0 0 0;
+                    margin: 0 0 10px 0;
+
+                    span {
+                        display: inline-block;
+                        width: 32px;
+                        height: 32px;
+                        margin: -8px 6px 6px 0;
+                        background: url("../images/checkbox.png");
+                        background-repeat: no-repeat;
+                        background-position: top center;
+                    }
+                }
+            }
+
+            .radio {
+                input {
+                    display: none;
+
+                    &:checked {
+                        &+label {
+                            &:before {
+                                background-position: bottom center;
+                            }
+                        }
+                    }
+
+                }
+
+                label {
+                    display: flex;
+                    align-items: flex-start;
+                    padding: 8px 0 0 0;
+                    margin: 0 0 10px 0;
+
+                    &:before {
+                        content: "";
+                        display: inline-block;
+                        width: 32px;
+                        height: 32px;
+                        margin: -8px 6px 6px 0;
+                        background: url("../images/radio.png");
+                        background-repeat: no-repeat;
+                        background-position: top center;
+                    }
+                }
+            }
+
+            .button {
+                position: relative;
+                width: 160px;
+                border-radius: 0;
+
+                span {
+                    position: relative;
+                    z-index: 100;
+                    transition: 0.4s all;
+                }
+
+
+                &:hover {
+                    &:after {
+                        width: 65%;
+
+                    }
+
+                    &:before {
+                        width: 66%;
+                    }
+                }
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    display: block;
+                    height: 100%;
+                    width: 0;
+                    background: tomato;
+                    transition: all 0.5s;
+                    clip-path: polygon(0 0, 100% 0%, 60% 100%, 0% 100%);
+                }
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    display: block;
+                    height: 100%;
+                    width: 0;
+                    background: tomato;
+                    transition: all 0.5s;
+                    clip-path: polygon(0 0, 100% 0%, 60% 100%, 0% 100%);
+                    transform: rotate(180deg);
+                }
+
+            }
+        }
+    }
+}
